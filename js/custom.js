@@ -60,3 +60,14 @@ $(function () {
 
 
 });
+
+
+
+
+
+
+
+
+function redirectToNote138GB() {
+   window.location.href = "../xiaomi_redmi_note13_8gb/";
+}
