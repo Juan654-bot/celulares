@@ -8,7 +8,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>Cba Cel</title>
+      <title>NextGen</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -70,12 +70,12 @@
                               <!--<li class="nav-item">
                                  <a class="nav-link" href="shop.html">Shop</a>
                               </li>-->
-                              <li class="nav-item">
+                              <!--<li class="nav-item">
                                  <a class="nav-link" href="contact.html">Contactanos</a>
-                              </li>
-                              <!--<li class="nav-item d_none login_btn">
-                                 <a class="nav-link" href="#">Login</a>
                               </li>-->
+                              <li class="nav-item d_none login_btn">
+                                 <a class="nav-link" href="https://wa.me/543515181791">Whatsapp</a>
+                              </li>
                               <!--<li class="nav-item d_none">
                                  <a class="nav-link" href="#">Register</a>
                               </li>-->
@@ -191,7 +191,7 @@
          <div class="container-fluid">
             <div class="row">
                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                  <div class="glasses_box">
+                  <div class="glasses_box" onclick="redirectToContact()">
                      <figure><img src="images/glass1.png" alt="#"/></figure>
                      <h3><span class="blu">$</span>273.600</h3>
                      <p>Xiaomi Redmi Note 13</p>
@@ -220,30 +220,30 @@
                </div>
                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                   <div class="glasses_box">
-                     <figure><img src="images/glass1.png" alt="#"/></figure>
-                     <h3><span class="blu">$</span>273.600</h3>
-                     <p>Xiaomi Redmi Note 13</p>
+                     <figure><img src="images/glass5.png" alt="#"/></figure>
+                     <h3><span class="blu">$</span>468.000</h3>
+                     <p>Samsung Galaxy A34 5G</p>
                   </div>
                </div>
                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                   <div class="glasses_box">
-                     <figure><img src="images/glass2.png" alt="#"/></figure>
-                     <h3><span class="blu">$</span>405.600</h3>
-                     <p>Samsung Galaxy A25 5G</p>
+                     <figure><img src="images/glass6.png" alt="#"/></figure>
+                     <h3><span class="blu">$</span>243.600</h3>
+                     <p>Motorola Moto G14</p>
                   </div>
                </div>
                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                   <div class="glasses_box">
-                     <figure><img src="images/glass3.png" alt="#"/></figure>
-                     <h3><span class="blu">$</span>981.600</h3>
-                     <p>iPhone 12</p>
+                     <figure><img src="images/glass7.png" alt="#"/></figure>
+                     <h3><span class="blu">$</span>171.600</h3>
+                     <p>Xiaomi Redmi A3</p>
                   </div>
                </div>
                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                   <div class="glasses_box">
-                     <figure><img src="images/glass4.png" alt="#"/></figure>
-                     <h3><span class="blu">$</span>211.200</h3>
-                     <p>Motorola Moto G23</p>
+                     <figure><img src="images/glass8.png" alt="#"/></figure>
+                     <h3><span class="blu">$</span>792.000</h3>
+                     <p>iPhone 11</p>
                   </div>
                </div>
                <div class="col-md-12">
@@ -282,7 +282,7 @@
                <div class="col-md-12">
                   <div class="titlepage">
                      <h2>Tu mejor elección</h2>
-                     <p></p>
+                     <p>NextGen, te conviene.</p>
                   </div>
                </div>
             </div>
@@ -399,9 +399,9 @@
                <div class="row">
                   <div class="col-md-8 offset-md-2">
                      <ul class="location_icon">
-                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a><br> Location</li>
-                        <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i></a><br> +01 1234567890</li>
-                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a><br> demo@gmail.com</li>
+                        <li><a href="https://maps.app.goo.gl/jhwmKEQX8ovSCKGD6"><i class="fa fa-map-marker" aria-hidden="true"></i></a><br> Montevideo 550,<br>Córdoba Capital</li>
+                        <li><a href="https://wa.me/543515181791"><i class="fa fa-phone" aria-hidden="true"></i></a><br> +54 (351) 518-1791</li>
+                        <li><a href="mailto:nextgen@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a><br> nextgen@gmail.com</li>
                      </ul>
                   </div>
                </div>
@@ -410,7 +410,7 @@
                <div class="container">
                   <div class="row">
                      <div class="col-md-12">
-                        <p>© 2024 All Rights Reserved</p>
+                        <p>© 2024 Todos los derechos reservados</p>
                      </div>
                   </div>
                </div>
@@ -427,25 +427,24 @@
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
       <script>
-         // This example adds a marker to indicate the position of Bondi Beach in Sydney,
-         // Australia.
-         function initMap() {
-           var map = new google.maps.Map(document.getElementById('map'), {
-             zoom: 11,
-             center: {lat: 40.645037, lng: -73.880224},
-             });
-         
-         var image = 'images/maps-and-flags.png';
-         var beachMarker = new google.maps.Marker({
-             position: {lat: 40.645037, lng: -73.880224},
-             map: map,
-             icon: image
-           });
+         document.addEventListener("DOMContentLoaded", function() {
+            var mapDiv = document.getElementById('map');
+            var iframe = document.createElement('iframe');
+            iframe.src = "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2863.068569274027!2d-64.1937853096872!3d-31.420145243243535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1716993142978!5m2!1ses-419!2sar";
+            iframe.width = "100%";
+            iframe.height = "900";
+            iframe.style.border = "0";
+            iframe.allowFullscreen = "";
+            iframe.loading = "lazy";
+            iframe.referrerPolicy = "no-referrer-when-downgrade";
+            mapDiv.appendChild(iframe);
+         });
+      </script>
+      <script>
+         function redirectToContact() {
+            window.location.href = "contact.html";
          }
       </script>
-      <!-- google map js -->
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
-      <!-- end google map js --> 
    </body>
 </html>
 
