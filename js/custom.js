@@ -99,3 +99,7 @@ function redirectToRedmiA34GB() {
 function redirectToiPhone11128GB() {
 	window.location.href = "../iphone11_128gb/";
 }
+
+function redirectToA545G256GB() {
+	window.location.href = "../samsung_galaxy_a54_5g_256gb/";
+}
