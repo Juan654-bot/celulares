@@ -50,6 +50,22 @@
          .glasses_box {
             background-color: rgba(255, 255, 255, 0.527);
          }
+
+                  /* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .glasses {
+        top: 195px; /* Ajusta este valor según sea necesario */
+        left: 0; /* Ajusta este valor según sea necesario */
+    }
+
+    .main_form {
+        top: 570px; /* Ajusta este valor según sea necesario */
+    }
+
+    .footer {
+      margin-top: 250px;
+    }
+}
      </style>
    </head>
    <!-- body -->
@@ -234,7 +250,7 @@
 			alert("Por favor, completa todos los campos requeridos antes de continuar.");
 		} else {
 			// Construir el mensaje de WhatsApp con los datos del usuario
-			var mensaje = "Hola, estoy interesado/a en comprar el iPhone 12 (128GB), " + cantidad + " unidad(es), de color " + color + ". Mi nombre es " + nombre + " y mi correo electrónico es " + email + ".";
+			var mensaje = "Hola, estoy interesad@ en comprar el iPhone 12 (128GB), " + cantidad + " unidad(es), de color " + color + ". \nMi nombre es " + nombre + " y mi correo electrónico es " + email + ".";
 	
 			// Codificar el mensaje para usarlo en un URI
 			var mensajeCodificado = encodeURIComponent(mensaje);
