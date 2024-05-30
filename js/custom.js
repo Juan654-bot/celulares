@@ -103,3 +103,35 @@ function redirectToiPhone11128GB() {
 function redirectToA545G256GB() {
 	window.location.href = "../samsung_galaxy_a54_5g_256gb/";
 }
+
+function redirectToMotoG73() {
+	window.location.href = "../motorola_moto_g73/";
+}
+
+function redirectToMotoE22() {
+	window.location.href = "../motorola_moto_e22/";
+}
+
+function redirectToMotoG148GB() {
+	window.location.href = "../motorola_moto_g14_8gb/";
+}
+
+function redirectToRedmi13C8GB() {
+	window.location.href = "../xiaomi_redmi_13c_8gb/";
+}
+
+function redirectToBC10000PI_IC() {
+	window.location.href = "../elfbar_bc10000_pineaple_ice/";
+}
+
+function redirectToBC10000GR_IC() {
+	window.location.href = "../elfbar_bc10000_grape_ice/";
+}
+
+function redirectToBC10000TO() {
+	window.location.href = "../elfbar_bc10000_tobacco/";
+}
+
+function redirectToBC10000ST_IC() {
+	window.location.href = "../elfbar_bc10000_strawberry_ice/";
+}
