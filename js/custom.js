@@ -159,3 +159,7 @@ function redirectToV80PA_FR_SO_KI() {
 function redirectToV80ME() {
 	window.location.href = "../ignite_v80_menthol/";
 }
+
+function redirectToPS5() {
+	window.location.href = "../sony_playstation_5/";
+}
