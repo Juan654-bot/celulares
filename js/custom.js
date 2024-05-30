@@ -143,3 +143,19 @@ function redirectToA05S5G() {
 function redirectToRedmi12C() {
 	window.location.href = "../xiaomi_redmi_12c/";
 }
+
+function redirectToV80ST_IC() {
+	window.location.href = "../ignite_v80_strawberry_ice/";
+}
+
+function redirectToV80IC_MI() {
+	window.location.href = "../ignite_v80_icy_mint/";
+}
+
+function redirectToV80PA_FR_SO_KI() {
+	window.location.href = "../ignite_v80_passion_fruit_sour_kiwi/";
+}
+
+function redirectToV80ME() {
+	window.location.href = "../ignite_v80_menthol/";
+}
