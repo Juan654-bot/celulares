@@ -28,6 +28,12 @@
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      <style>
+         .nav-item.dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0; /* necesario para que funcione bien */
+         }
+      </style>
    </head>
    <!-- body -->
    <body class="main-layout">
@@ -61,11 +67,29 @@
                               <li class="nav-item active">
                                  <a class="nav-link" href="../inicio/">Inicio</a>
                               </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="../tienda/">Tienda</a>
+                              <li class="nav-item dropdown">
+                                 <a class="nav-link dropdown-toggle" href="#" id="celularesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Celulares
+                                 </a>
+                                 <div class="dropdown-menu" aria-labelledby="celularesDropdown">
+                                    <a class="dropdown-item" href="../celulares/#samsung">Samsung</a>
+                                    <a class="dropdown-item" href="../celulares/#motorola">Motorola</a>
+                                    <a class="dropdown-item" href="../celulares/#xiaomi">Xiaomi</a>
+                                    <a class="dropdown-item" href="../celulares/#apple">Apple</a>
+                                    <!-- Añade más marcas según sea necesario -->
+                                 </div>
                               </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="../sobre_nosotros/">Sobre nosotros</a>
+                              <li class="nav-item dropdown">
+                                 <a class="nav-link dropdown-toggle" href="#" id="podsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Pods
+                                 </a>
+                                 <div class="dropdown-menu" aria-labelledby="podsDropdown">
+                                    <a class="dropdown-item" href="../pods/#elfbar">Elf Bar</a>
+                                    <a class="dropdown-item" href="../pods/#ignite">Ignite</a>
+                                    <a class="dropdown-item" href="../pods/#lostmary">Lost Mary</a>
+                                    <a class="dropdown-item" href="../pods/#geekbar">Geek Bar</a>
+                                    <!-- Añade más marcas según sea necesario -->
+                                 </div>
                               </li>
                               <!--<li class="nav-item">
                                  <a class="nav-link" href="shop.html">Shop</a>
@@ -73,8 +97,8 @@
                               <!--<li class="nav-item">
                                  <a class="nav-link" href="contact.html">Contactanos</a>
                               </li>-->
-                              <li class="nav-item d_none login_btn">
-                                 <a class="nav-link" href="https://wa.me/543515181791">Whatsapp</a>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="https://wa.me/543515181791">WhatsApp</a>
                               </li>
                               <!--<li class="nav-item d_none">
                                  <a class="nav-link" href="#">Register</a>

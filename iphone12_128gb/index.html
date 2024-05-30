@@ -56,6 +56,7 @@
     .glasses {
         top: 195px; /* Ajusta este valor según sea necesario */
         left: 0; /* Ajusta este valor según sea necesario */
+        z-index: -5;
     }
 
     .main_form {
@@ -67,6 +68,12 @@
     }
 }
      </style>
+           <style>
+            .nav-item.dropdown:hover .dropdown-menu {
+               display: block;
+               margin-top: 0; /* necesario para que funcione bien */
+            }
+         </style>
    </head>
    <!-- body -->
    <body class="main-layout position_head">
@@ -97,14 +104,32 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarsExample04">
                            <ul class="navbar-nav mr-auto">
-                              <li class="nav-item ">
+                              <li class="nav-item">
                                  <a class="nav-link" href="../inicio/">Inicio</a>
                               </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="../tienda/">Tienda</a>
+                              <li class="nav-item active dropdown">
+                                 <a class="nav-link dropdown-toggle" href="#" id="celularesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Celulares
+                                 </a>
+                                 <div class="dropdown-menu" aria-labelledby="celularesDropdown">
+                                    <a class="dropdown-item" href="../celulares/#samsung">Samsung</a>
+                                    <a class="dropdown-item" href="../celulares/#motorola">Motorola</a>
+                                    <a class="dropdown-item" href="../celulares/#xiaomi">Xiaomi</a>
+                                    <a class="dropdown-item" href="../celulares/#apple">Apple</a>
+                                    <!-- Añade más marcas según sea necesario -->
+                                 </div>
                               </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="../sobre_nosotros/">Sobre nosotros</a>
+                              <li class="nav-item dropdown">
+                                 <a class="nav-link dropdown-toggle" href="#" id="podsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Pods
+                                 </a>
+                                 <div class="dropdown-menu" aria-labelledby="podsDropdown">
+                                    <a class="dropdown-item" href="../pods/#elfbar">Elf Bar</a>
+                                    <a class="dropdown-item" href="../pods/#ignite">Ignite</a>
+                                    <a class="dropdown-item" href="../pods/#lostmary">Lost Mary</a>
+                                    <a class="dropdown-item" href="../pods/#geekbar">Geek Bar</a>
+                                    <!-- Añade más marcas según sea necesario -->
+                                 </div>
                               </li>
                               <!--<li class="nav-item">
                                  <a class="nav-link" href="shop.html">Shop</a>
@@ -112,13 +137,13 @@
                               <!--<li class="nav-item">
                                  <a class="nav-link" href="contact.html">Contactanos</a>
                               </li>-->
-                              <li class="nav-item d_none login_btn">
-                                 <a class="nav-link" href="https://wa.me/543515181791">Whatsapp</a>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="https://wa.me/543515181791">WhatsApp</a>
                               </li>
                               <!--<li class="nav-item d_none">
                                  <a class="nav-link" href="#">Register</a>
-                              </li>
-                              <li class="nav-item d_none sea_icon">
+                              </li>-->
+                              <!--<li class="nav-item d_none sea_icon">
                                  <a class="nav-link" href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i><i class="fa fa-search" aria-hidden="true"></i></a>
                               </li>-->
                            </ul>
@@ -168,7 +193,6 @@
                             <option value="" disabled selected>Color</option>
                             <option value="Negro">Negro</option>
                             <option value="Blanco">Blanco</option>
-                            <option value="Verde">Verde</option>
                             <!-- Puedes agregar más opciones según sea necesario -->
                         </select>
                     </div>
@@ -180,7 +204,7 @@
                </div>
             </div>
          </div>
-         <div class="container-fluid">
+         <div class="container-fluid" style="z-index: -10;">
             <div class="map_section">
                <div id="map">
                </div>
@@ -256,7 +280,7 @@
 			var mensajeCodificado = encodeURIComponent(mensaje);
 	
 			// Construir el enlace de WhatsApp con el mensaje
-			var enlaceWhatsApp = "https://wa.me/543794673752?text=" + mensajeCodificado;
+			var enlaceWhatsApp = "https://wa.me/543515181791?text=" + mensajeCodificado;
 	
 			// Redirigir al usuario a WhatsApp
 			window.location.href = enlaceWhatsApp;
