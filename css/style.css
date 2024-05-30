@@ -838,3 +838,15 @@ ul.location_icon li a {
 .shop {
      margin-bottom: 90px;
 }
+
+
+
+
+
+.glasses_box {
+     transition: transform 0.3s ease-in-out;
+ }
+
+ .glasses_box:hover {
+     transform: scale(1.025);
+ }
