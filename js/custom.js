@@ -135,3 +135,11 @@ function redirectToBC10000TO() {
 function redirectToBC10000ST_IC() {
 	window.location.href = "../elfbar_bc10000_strawberry_ice/";
 }
+
+function redirectToA05S5G() {
+	window.location.href = "../samsung_galaxy_a05s_5g/";
+}
+
+function redirectToRedmi12C() {
+	window.location.href = "../xiaomi_redmi_12c/";
+}
