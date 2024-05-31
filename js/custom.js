@@ -45,6 +45,8 @@ window.addEventListener('load', () => {
 		"A15_8GB": 255, // Precio en USD
 		"A04E": 128, // Precio en USD
 		"A35_5G_256GB": 518, // Precio en USD
+		"PS5": 995, // Precio en USD
+		"": 0, // Precio en USD
         // Agrega los demás productos y sus precios aquí
     };
 
@@ -74,6 +76,8 @@ window.addEventListener('load', () => {
 	actualizarPrecio('precioA15_8GB', preciosEnDolares["A15_8GB"]);
 	actualizarPrecio('precioA04E', preciosEnDolares["A04E"]);
 	actualizarPrecio('precioA35_5G_256GB', preciosEnDolares["A35_5G_256GB"]);
+	actualizarPrecio('precioPS5', preciosEnDolares["PS5"]);
+	actualizarPrecio('', preciosEnDolares[""]);
     // Actualiza los demás precios aquí
 });
 
