@@ -1,62 +1,74 @@
 
 // Define el tipo de cambio manualmente aquí
-const tipoDeCambio = 1230; // Ejemplo: 1230 ARS por 1 USD
+const tipoDeCambio = 1215; // Ejemplo: 1215 ARS por 1 USD
 
 function formatearPrecio(precio) {
-	return new Intl.NumberFormat('es-AR', {
-		minimumFractionDigits: 0,
-		maximumFractionDigits: 0
-	}).format(precio);
+    return new Intl.NumberFormat('es-AR', {
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0
+    }).format(precio);
 }
 
-function actualizarPrecios(tipoDeCambio) {
-	if (!tipoDeCambio) return;
-
-	const preciosEnDolares = {
-		"A25_5G_8GB": 338, // Precio en USD
-		"A05S_5G": 188, // Precio en USD
-		"A54_5G_256GB": 525, // Precio en USD
-		"A34_5G_8GB": 390, // Precio en USD
-		"MotoG23": 176, // Precio en USD
-		"MotoG73": 255, // Precio en USD
-		"MotoE22": 128, // Precio en USD
-		"MotoG14_8GB": 203, // Precio en USD
-		"Redmi12C": 132, // Precio en USD
-		"RedmiA3_4GB": 143, // Precio en USD
-		"Note13_8GB": 228, // Precio en USD
-		"Redmi13C_8GB": 195, // Precio en USD
-		"iPhone11_128GB": 645, // Precio en USD
-		"iPhone12_128GB": 818, // Precio en USD
-		"": 0, // Precio en USD
-		"": 0, // Precio en USD
-		"": 0, // Precio en USD
-		"": 0, // Precio en USD
-		
-	};
-
-	document.getElementById('precioMotoG73').textContent = formatearPrecio(preciosEnDolares["MotoG73"] * tipoDeCambio);
-	document.getElementById('precioA05S_5G').textContent = formatearPrecio(preciosEnDolares["A05S_5G"] * tipoDeCambio);
-	document.getElementById('precioA34_5G_8GB').textContent = formatearPrecio(preciosEnDolares["A34_5G_8GB"] * tipoDeCambio);
-	document.getElementById('precioiPhone11_128GB').textContent = formatearPrecio(preciosEnDolares["iPhone11_128GB"] * tipoDeCambio);
-	document.getElementById('precioA25_5G_8GB').textContent = formatearPrecio(preciosEnDolares["A25_5G_8GB"] * tipoDeCambio);
-	document.getElementById('precioA54_5G_256GB').textContent = formatearPrecio(preciosEnDolares["A54_5G_256GB"] * tipoDeCambio);
-	document.getElementById('precioMotoG23').textContent = formatearPrecio(preciosEnDolares["MotoG23"] * tipoDeCambio);
-	document.getElementById('precioMotoE22').textContent = formatearPrecio(preciosEnDolares["MotoE22"] * tipoDeCambio);
-	document.getElementById('precioMotoG14_8GB').textContent = formatearPrecio(preciosEnDolares["MotoG14_8GB"] * tipoDeCambio);
-	document.getElementById('precioRedmi12C').textContent = formatearPrecio(preciosEnDolares["Redmi12C"] * tipoDeCambio);
-	document.getElementById('precioRedmiA3_4GB').textContent = formatearPrecio(preciosEnDolares["RedmiA3_4GB"] * tipoDeCambio);
-	document.getElementById('precioNote13_8GB').textContent = formatearPrecio(preciosEnDolares["Note13_8GB"] * tipoDeCambio);
-	document.getElementById('precioRedmi13C_8GB').textContent = formatearPrecio(preciosEnDolares["Redmi13C_8GB"] * tipoDeCambio);
-	document.getElementById('precioiPhone12_128GB').textContent = formatearPrecio(preciosEnDolares["iPhone12_128GB"] * tipoDeCambio);
-	document.getElementById('').textContent = formatearPrecio(preciosEnDolares[""] * tipoDeCambio);
-	document.getElementById('').textContent = formatearPrecio(preciosEnDolares[""] * tipoDeCambio);
-	document.getElementById('').textContent = formatearPrecio(preciosEnDolares[""] * tipoDeCambio);
-	document.getElementById('').textContent = formatearPrecio(preciosEnDolares[""] * tipoDeCambio);
+function actualizarPrecio(idElemento, precioEnUSD) {
+    const elemento = document.getElementById(idElemento);
+    if (elemento) {
+        const precio = precioEnUSD * tipoDeCambio;
+        elemento.textContent = formatearPrecio(precio);
+    }
 }
 
 window.addEventListener('load', () => {
-	actualizarPrecios(tipoDeCambio);
+    const preciosEnDolares = {
+        "A25_5G_8GB": 338, // Precio en USD
+        "A05S_5G": 188, // Precio en USD
+        "A54_5G_256GB": 525, // Precio en USD
+        "A34_5G_8GB": 390, // Precio en USD
+        "MotoG23": 176, // Precio en USD
+        "MotoG73": 255, // Precio en USD
+        "MotoE22": 128, // Precio en USD
+        "MotoG14_8GB": 203, // Precio en USD
+        "Redmi12C": 132, // Precio en USD
+        "RedmiA3_4GB": 143, // Precio en USD
+        "Note13_8GB": 228, // Precio en USD
+        "Redmi13C_8GB": 195, // Precio en USD
+        "iPhone11_128GB": 645, // Precio en USD
+        "iPhone12_128GB": 818, // Precio en USD
+		"ElfBarBC10000(1)": 20.8, // Precio en USD
+		"ElfBarBC10000(2)": 20.8, // Precio en USD
+		"ElfBarBC10000(3)": 20.8, // Precio en USD
+		"ElfBarBC10000(4)": 20.8, // Precio en USD
+		"IgniteV80(1)": 20.8, // Precio en USD
+		"IgniteV80(2)": 20.8, // Precio en USD
+		"IgniteV80(3)": 20.8, // Precio en USD
+		"IgniteV80(4)": 20.8, // Precio en USD
+        // Agrega los demás productos y sus precios aquí
+    };
+
+    actualizarPrecio('precioMotoG73', preciosEnDolares["MotoG73"]);
+    actualizarPrecio('precioA05S_5G', preciosEnDolares["A05S_5G"]);
+    actualizarPrecio('precioA34_5G_8GB', preciosEnDolares["A34_5G_8GB"]);
+    actualizarPrecio('precioiPhone11_128GB', preciosEnDolares["iPhone11_128GB"]);
+    actualizarPrecio('precioA25_5G_8GB', preciosEnDolares["A25_5G_8GB"]);
+    actualizarPrecio('precioA54_5G_256GB', preciosEnDolares["A54_5G_256GB"]);
+    actualizarPrecio('precioMotoG23', preciosEnDolares["MotoG23"]);
+    actualizarPrecio('precioMotoE22', preciosEnDolares["MotoE22"]);
+    actualizarPrecio('precioMotoG14_8GB', preciosEnDolares["MotoG14_8GB"]);
+    actualizarPrecio('precioRedmi12C', preciosEnDolares["Redmi12C"]);
+    actualizarPrecio('precioRedmiA3_4GB', preciosEnDolares["RedmiA3_4GB"]);
+    actualizarPrecio('precioNote13_8GB', preciosEnDolares["Note13_8GB"]);
+    actualizarPrecio('precioRedmi13C_8GB', preciosEnDolares["Redmi13C_8GB"]);
+    actualizarPrecio('precioiPhone12_128GB', preciosEnDolares["iPhone12_128GB"]);
+	actualizarPrecio('precioElfBarBC10000(1)', preciosEnDolares["ElfBarBC10000(1)"]);
+	actualizarPrecio('precioElfBarBC10000(2)', preciosEnDolares["ElfBarBC10000(2)"]);
+	actualizarPrecio('precioElfBarBC10000(3)', preciosEnDolares["ElfBarBC10000(3)"]);
+	actualizarPrecio('precioElfBarBC10000(4)', preciosEnDolares["ElfBarBC10000(4)"]);
+	actualizarPrecio('precioIgniteV80(1)', preciosEnDolares["IgniteV80(1)"]);
+	actualizarPrecio('precioIgniteV80(2)', preciosEnDolares["IgniteV80(2)"]);
+	actualizarPrecio('precioIgniteV80(3)', preciosEnDolares["IgniteV80(3)"]);
+	actualizarPrecio('precioIgniteV80(4)', preciosEnDolares["IgniteV80(4)"]);
+    // Actualiza los demás precios aquí
 });
+
 
 
 

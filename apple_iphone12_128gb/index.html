@@ -295,30 +295,6 @@
 			window.location.href = enlaceWhatsApp;
 		}
 	}
-   
-
-
-   function formatearPrecio(precio) {
-	return new Intl.NumberFormat('es-AR', {
-		minimumFractionDigits: 0,
-		maximumFractionDigits: 0
-	}).format(precio);
-}
-
-function actualizarPrecios(tipoDeCambio) {
-	if (!tipoDeCambio) return;
-
-	const preciosEnDolares = {
-		"iPhone12_128GB": 818, // Precio en USD
-		
-	};
-
-	document.getElementById('precioiPhone12_128GB').textContent = formatearPrecio(preciosEnDolares["iPhone12_128GB"] * tipoDeCambio);
-}
-
-window.addEventListener('load', () => {
-	actualizarPrecios(tipoDeCambio);
-});
       </script>
    </body>
 </html>

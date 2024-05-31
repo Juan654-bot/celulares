@@ -171,7 +171,7 @@
                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                   <div class="glasses_box">
                      <figure><img src="../images/bc10000to.png" alt="#"/></figure>
-                     <h3><span class="blu">$</span>0</h3>
+                     <h3><span class="blu">$</span><span id="precioElfBarBC10000(1)">Cargando...</span></h3>
                      <p>Elf Bar BC10000<br>Tobacco</p>
                   </div>
                </div>
@@ -286,30 +286,6 @@
 			window.location.href = enlaceWhatsApp;
 		}
 	}
-   
-
-
-   function formatearPrecio(precio) {
-	return new Intl.NumberFormat('es-AR', {
-		minimumFractionDigits: 0,
-		maximumFractionDigits: 0
-	}).format(precio);
-}
-
-function actualizarPrecios(tipoDeCambio) {
-	if (!tipoDeCambio) return;
-
-	const preciosEnDolares = {
-		"": 0, // Precio en USD
-		
-	};
-
-	document.getElementById('precio').textContent = formatearPrecio(preciosEnDolares[""] * tipoDeCambio);
-}
-
-window.addEventListener('load', () => {
-	actualizarPrecios(tipoDeCambio);
-});
       </script>
    </body>
 </html>

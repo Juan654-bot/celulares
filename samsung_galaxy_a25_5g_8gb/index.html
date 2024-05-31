@@ -295,30 +295,6 @@
 			window.location.href = enlaceWhatsApp;
 		}
 	}
-   
-
-
-   function formatearPrecio(precio) {
-	return new Intl.NumberFormat('es-AR', {
-		minimumFractionDigits: 0,
-		maximumFractionDigits: 0
-	}).format(precio);
-}
-
-function actualizarPrecios(tipoDeCambio) {
-	if (!tipoDeCambio) return;
-
-	const preciosEnDolares = {
-		"A25_5G_8GB": 338, // Precio en USD
-		
-	};
-
-	document.getElementById('precioA25_5G_8GB').textContent = formatearPrecio(preciosEnDolares["A25_5G_8GB"] * tipoDeCambio);
-}
-
-window.addEventListener('load', () => {
-	actualizarPrecios(tipoDeCambio);
-});
       </script>
    </body>
 </html>

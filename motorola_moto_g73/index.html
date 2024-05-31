@@ -295,30 +295,6 @@
 			window.location.href = enlaceWhatsApp;
 		}
 	}
-   
-
-
-   function formatearPrecio(precio) {
-	return new Intl.NumberFormat('es-AR', {
-		minimumFractionDigits: 0,
-		maximumFractionDigits: 0
-	}).format(precio);
-}
-
-function actualizarPrecios(tipoDeCambio) {
-	if (!tipoDeCambio) return;
-
-	const preciosEnDolares = {
-		"MotoG73": 255, // Precio en USD
-		
-	};
-
-	document.getElementById('precioMotoG73').textContent = formatearPrecio(preciosEnDolares["MotoG73"] * tipoDeCambio);
-}
-
-window.addEventListener('load', () => {
-	actualizarPrecios(tipoDeCambio);
-});
       </script>
    </body>
 </html>
