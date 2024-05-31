@@ -251,7 +251,7 @@ function redirectToPS5() {
 }
 
 function redirectToA555G256GB() {
-	window.location.href = "../samsung_galaxy_a55_5g_256gg/";
+	window.location.href = "../samsung_galaxy_a55_5g_256gb/";
 }
 
 function redirectToA158GB() {
