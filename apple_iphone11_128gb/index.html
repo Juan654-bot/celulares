@@ -171,7 +171,7 @@
                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                   <div class="glasses_box">
                      <figure><img src="../images/glass8.png" alt="#"/></figure>
-                     <h3><span class="blu">$</span>792.000</h3>
+                     <h3><span class="blu">$</span><span id="precioiPhone11_128GB">Cargando...</span></h3>
                      <p>Apple iPhone 11<br>4 RAM / 128 GB</p>
                   </div>
                </div>
@@ -295,6 +295,30 @@
 			window.location.href = enlaceWhatsApp;
 		}
 	}
+
+
+
+   function formatearPrecio(precio) {
+	return new Intl.NumberFormat('es-AR', {
+		minimumFractionDigits: 0,
+		maximumFractionDigits: 0
+	}).format(precio);
+}
+
+function actualizarPrecios(tipoDeCambio) {
+	if (!tipoDeCambio) return;
+
+	const preciosEnDolares = {
+		"iPhone11_128GB": 645, // Precio en USD
+		
+	};
+
+	document.getElementById('precioiPhone11_128GB').textContent = formatearPrecio(preciosEnDolares["iPhone11_128GB"] * tipoDeCambio);
+}
+
+window.addEventListener('load', () => {
+	actualizarPrecios(tipoDeCambio);
+});
       </script>
    </body>
 </html>

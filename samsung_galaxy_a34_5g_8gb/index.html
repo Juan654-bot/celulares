@@ -171,7 +171,7 @@
                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                   <div class="glasses_box">
                      <figure><img src="../images/glass5.png" alt="#"/></figure>
-                     <h3><span class="blu">$</span>468.000</h3>
+                     <h3><span class="blu">$</span><span id="precioA34_5G_8GB">Cargando...</span></h3>
                      <p>Samsung Galaxy A34 5G<br>8 RAM / 256 GB</p>
                   </div>
                </div>
@@ -295,6 +295,30 @@
 			window.location.href = enlaceWhatsApp;
 		}
 	}
+   
+
+
+   function formatearPrecio(precio) {
+	return new Intl.NumberFormat('es-AR', {
+		minimumFractionDigits: 0,
+		maximumFractionDigits: 0
+	}).format(precio);
+}
+
+function actualizarPrecios(tipoDeCambio) {
+	if (!tipoDeCambio) return;
+
+	const preciosEnDolares = {
+		"A34_5G_8GB": 390, // Precio en USD
+		
+	};
+
+	document.getElementById('precioA34_5G_8GB').textContent = formatearPrecio(preciosEnDolares["A34_5G_8GB"] * tipoDeCambio);
+}
+
+window.addEventListener('load', () => {
+	actualizarPrecios(tipoDeCambio);
+});
       </script>
    </body>
 </html>

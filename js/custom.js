@@ -1,3 +1,69 @@
+
+// Define el tipo de cambio manualmente aquí
+const tipoDeCambio = 1230; // Ejemplo: 1230 ARS por 1 USD
+
+function formatearPrecio(precio) {
+	return new Intl.NumberFormat('es-AR', {
+		minimumFractionDigits: 0,
+		maximumFractionDigits: 0
+	}).format(precio);
+}
+
+function actualizarPrecios(tipoDeCambio) {
+	if (!tipoDeCambio) return;
+
+	const preciosEnDolares = {
+		"A25_5G_8GB": 338, // Precio en USD
+		"A05S_5G": 188, // Precio en USD
+		"A54_5G_256GB": 525, // Precio en USD
+		"A34_5G_8GB": 390, // Precio en USD
+		"MotoG23": 176, // Precio en USD
+		"MotoG73": 255, // Precio en USD
+		"MotoE22": 128, // Precio en USD
+		"MotoG14_8GB": 203, // Precio en USD
+		"Redmi12C": 132, // Precio en USD
+		"RedmiA3_4GB": 143, // Precio en USD
+		"Note13_8GB": 228, // Precio en USD
+		"Redmi13C_8GB": 195, // Precio en USD
+		"iPhone11_128GB": 645, // Precio en USD
+		"iPhone12_128GB": 818, // Precio en USD
+		"": 0, // Precio en USD
+		"": 0, // Precio en USD
+		"": 0, // Precio en USD
+		"": 0, // Precio en USD
+		
+	};
+
+	document.getElementById('precioMotoG73').textContent = formatearPrecio(preciosEnDolares["MotoG73"] * tipoDeCambio);
+	document.getElementById('precioA05S_5G').textContent = formatearPrecio(preciosEnDolares["A05S_5G"] * tipoDeCambio);
+	document.getElementById('precioA34_5G_8GB').textContent = formatearPrecio(preciosEnDolares["A34_5G_8GB"] * tipoDeCambio);
+	document.getElementById('precioiPhone11_128GB').textContent = formatearPrecio(preciosEnDolares["iPhone11_128GB"] * tipoDeCambio);
+	document.getElementById('precioA25_5G_8GB').textContent = formatearPrecio(preciosEnDolares["A25_5G_8GB"] * tipoDeCambio);
+	document.getElementById('precioA54_5G_256GB').textContent = formatearPrecio(preciosEnDolares["A54_5G_256GB"] * tipoDeCambio);
+	document.getElementById('precioMotoG23').textContent = formatearPrecio(preciosEnDolares["MotoG23"] * tipoDeCambio);
+	document.getElementById('precioMotoE22').textContent = formatearPrecio(preciosEnDolares["MotoE22"] * tipoDeCambio);
+	document.getElementById('precioMotoG14_8GB').textContent = formatearPrecio(preciosEnDolares["MotoG14_8GB"] * tipoDeCambio);
+	document.getElementById('precioRedmi12C').textContent = formatearPrecio(preciosEnDolares["Redmi12C"] * tipoDeCambio);
+	document.getElementById('precioRedmiA3_4GB').textContent = formatearPrecio(preciosEnDolares["RedmiA3_4GB"] * tipoDeCambio);
+	document.getElementById('precioNote13_8GB').textContent = formatearPrecio(preciosEnDolares["Note13_8GB"] * tipoDeCambio);
+	document.getElementById('precioRedmi13C_8GB').textContent = formatearPrecio(preciosEnDolares["Redmi13C_8GB"] * tipoDeCambio);
+	document.getElementById('precioiPhone12_128GB').textContent = formatearPrecio(preciosEnDolares["iPhone12_128GB"] * tipoDeCambio);
+	document.getElementById('').textContent = formatearPrecio(preciosEnDolares[""] * tipoDeCambio);
+	document.getElementById('').textContent = formatearPrecio(preciosEnDolares[""] * tipoDeCambio);
+	document.getElementById('').textContent = formatearPrecio(preciosEnDolares[""] * tipoDeCambio);
+	document.getElementById('').textContent = formatearPrecio(preciosEnDolares[""] * tipoDeCambio);
+}
+
+window.addEventListener('load', () => {
+	actualizarPrecios(tipoDeCambio);
+});
+
+
+
+
+
+
+
 /*---------------------------------------------------------------------
     File Name: custom.js
 ---------------------------------------------------------------------*/
