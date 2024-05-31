@@ -1,12 +1,21 @@
 
-// Define el tipo de cambio manualmente aquí
 const tipoDeCambio = 1215; // Ejemplo: 1215 ARS por 1 USD
 
 function formatearPrecio(precio) {
+    // Redondea el precio al entero más cercano
+    let precioRedondeado = Math.round(precio);
+    
+    // Convierte el precio a string y reemplaza los últimos dos dígitos por "99"
+    let precioStr = precioRedondeado.toString();
+    precioStr = precioStr.slice(0, -2) + "99";
+    
+    // Convierte el string de vuelta a número
+    const precioAjustado = parseInt(precioStr, 10);
+    
     return new Intl.NumberFormat('es-AR', {
         minimumFractionDigits: 0,
         maximumFractionDigits: 0
-    }).format(precio);
+    }).format(precioAjustado);
 }
 
 function actualizarPrecio(idElemento, precioEnUSD) {
@@ -33,20 +42,19 @@ window.addEventListener('load', () => {
         "Redmi13C_8GB": 195, // Precio en USD
         "iPhone11_128GB": 645, // Precio en USD
         "iPhone12_128GB": 818, // Precio en USD
-		"ElfBarBC10000(1)": 20.8, // Precio en USD
-		"ElfBarBC10000(2)": 20.8, // Precio en USD
-		"ElfBarBC10000(3)": 20.8, // Precio en USD
-		"ElfBarBC10000(4)": 20.8, // Precio en USD
-		"IgniteV80(1)": 20.8, // Precio en USD
-		"IgniteV80(2)": 20.8, // Precio en USD
-		"IgniteV80(3)": 20.8, // Precio en USD
-		"IgniteV80(4)": 20.8, // Precio en USD
-		"A55_5G_256GB": 585, // Precio en USD
-		"A15_8GB": 255, // Precio en USD
-		"A04E": 128, // Precio en USD
-		"A35_5G_256GB": 518, // Precio en USD
-		"PS5": 995, // Precio en USD
-		"": 0, // Precio en USD
+        "ElfBarBC10000(1)": 20.8, // Precio en USD
+        "ElfBarBC10000(2)": 20.8, // Precio en USD
+        "ElfBarBC10000(3)": 20.8, // Precio en USD
+        "ElfBarBC10000(4)": 20.8, // Precio en USD
+        "IgniteV80(1)": 20.8, // Precio en USD
+        "IgniteV80(2)": 20.8, // Precio en USD
+        "IgniteV80(3)": 20.8, // Precio en USD
+        "IgniteV80(4)": 20.8, // Precio en USD
+        "A55_5G_256GB": 585, // Precio en USD
+        "A15_8GB": 255, // Precio en USD
+        "A04E": 128, // Precio en USD
+        "A35_5G_256GB": 518, // Precio en USD
+        "PS5": 995, // Precio en USD
         // Agrega los demás productos y sus precios aquí
     };
 
@@ -64,22 +72,22 @@ window.addEventListener('load', () => {
     actualizarPrecio('precioNote13_8GB', preciosEnDolares["Note13_8GB"]);
     actualizarPrecio('precioRedmi13C_8GB', preciosEnDolares["Redmi13C_8GB"]);
     actualizarPrecio('precioiPhone12_128GB', preciosEnDolares["iPhone12_128GB"]);
-	actualizarPrecio('precioElfBarBC10000(1)', preciosEnDolares["ElfBarBC10000(1)"]);
-	actualizarPrecio('precioElfBarBC10000(2)', preciosEnDolares["ElfBarBC10000(2)"]);
-	actualizarPrecio('precioElfBarBC10000(3)', preciosEnDolares["ElfBarBC10000(3)"]);
-	actualizarPrecio('precioElfBarBC10000(4)', preciosEnDolares["ElfBarBC10000(4)"]);
-	actualizarPrecio('precioIgniteV80(1)', preciosEnDolares["IgniteV80(1)"]);
-	actualizarPrecio('precioIgniteV80(2)', preciosEnDolares["IgniteV80(2)"]);
-	actualizarPrecio('precioIgniteV80(3)', preciosEnDolares["IgniteV80(3)"]);
-	actualizarPrecio('precioIgniteV80(4)', preciosEnDolares["IgniteV80(4)"]);
-	actualizarPrecio('precioA55_5G_256GB', preciosEnDolares["A55_5G_256GB"]);
-	actualizarPrecio('precioA15_8GB', preciosEnDolares["A15_8GB"]);
-	actualizarPrecio('precioA04E', preciosEnDolares["A04E"]);
-	actualizarPrecio('precioA35_5G_256GB', preciosEnDolares["A35_5G_256GB"]);
-	actualizarPrecio('precioPS5', preciosEnDolares["PS5"]);
-	actualizarPrecio('', preciosEnDolares[""]);
+    actualizarPrecio('precioElfBarBC10000(1)', preciosEnDolares["ElfBarBC10000(1)"]);
+    actualizarPrecio('precioElfBarBC10000(2)', preciosEnDolares["ElfBarBC10000(2)"]);
+    actualizarPrecio('precioElfBarBC10000(3)', preciosEnDolares["ElfBarBC10000(3)"]);
+    actualizarPrecio('precioElfBarBC10000(4)', preciosEnDolares["ElfBarBC10000(4)"]);
+    actualizarPrecio('precioIgniteV80(1)', preciosEnDolares["IgniteV80(1)"]);
+    actualizarPrecio('precioIgniteV80(2)', preciosEnDolares["IgniteV80(2)"]);
+    actualizarPrecio('precioIgniteV80(3)', preciosEnDolares["IgniteV80(3)"]);
+    actualizarPrecio('precioIgniteV80(4)', preciosEnDolares["IgniteV80(4)"]);
+    actualizarPrecio('precioA55_5G_256GB', preciosEnDolares["A55_5G_256GB"]);
+    actualizarPrecio('precioA15_8GB', preciosEnDolares["A15_8GB"]);
+    actualizarPrecio('precioA04E', preciosEnDolares["A04E"]);
+    actualizarPrecio('precioA35_5G_256GB', preciosEnDolares["A35_5G_256GB"]);
+    actualizarPrecio('precioPS5', preciosEnDolares["PS5"]);
     // Actualiza los demás precios aquí
 });
+
 
 
 
