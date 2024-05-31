@@ -77,7 +77,7 @@ $(function () {
  }
 
  function redirectToiPhone12128GB() {
-	window.location.href = "../iphone12_128gb/";
+	window.location.href = "../apple_iphone12_128gb/";
 }
 
 function redirectToMotoG23() {
@@ -97,7 +97,7 @@ function redirectToRedmiA34GB() {
 }
 
 function redirectToiPhone11128GB() {
-	window.location.href = "../iphone11_128gb/";
+	window.location.href = "../apple_iphone11_128gb/";
 }
 
 function redirectToA545G256GB() {
