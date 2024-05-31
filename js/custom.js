@@ -41,6 +41,10 @@ window.addEventListener('load', () => {
 		"IgniteV80(2)": 20.8, // Precio en USD
 		"IgniteV80(3)": 20.8, // Precio en USD
 		"IgniteV80(4)": 20.8, // Precio en USD
+		"A55_5G_256GB": 585, // Precio en USD
+		"A15_8GB": 255, // Precio en USD
+		"A04E": 128, // Precio en USD
+		"A35_5G_256GB": 518, // Precio en USD
         // Agrega los demás productos y sus precios aquí
     };
 
@@ -66,6 +70,10 @@ window.addEventListener('load', () => {
 	actualizarPrecio('precioIgniteV80(2)', preciosEnDolares["IgniteV80(2)"]);
 	actualizarPrecio('precioIgniteV80(3)', preciosEnDolares["IgniteV80(3)"]);
 	actualizarPrecio('precioIgniteV80(4)', preciosEnDolares["IgniteV80(4)"]);
+	actualizarPrecio('precioA55_5G_256GB', preciosEnDolares["A55_5G_256GB"]);
+	actualizarPrecio('precioA15_8GB', preciosEnDolares["A15_8GB"]);
+	actualizarPrecio('precioA04E', preciosEnDolares["A04E"]);
+	actualizarPrecio('precioA35_5G_256GB', preciosEnDolares["A35_5G_256GB"]);
     // Actualiza los demás precios aquí
 });
 
@@ -240,4 +248,20 @@ function redirectToV80ME() {
 
 function redirectToPS5() {
 	window.location.href = "../sony_playstation_5/";
+}
+
+function redirectToA555G256GB() {
+	window.location.href = "../samsung_galaxy_a55_5g_256gg/";
+}
+
+function redirectToA158GB() {
+	window.location.href = "../samsung_galaxy_a15_8gb/";
+}
+
+function redirectToA04E() {
+	window.location.href = "../samsung_galaxy_a04e/";
+}
+
+function redirectToA355G256GB() {
+	window.location.href = "../samsung_galaxy_a35_5g_256gb/";
 }
