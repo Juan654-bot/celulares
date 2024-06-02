@@ -165,115 +165,139 @@ $(function () {
 
 
 
+// Manejo de submenús en el menú desplegable
+document.addEventListener('DOMContentLoaded', function () {
+    // Obtener todos los elementos con la clase 'dropdown-submenu'
+    var dropdownSubmenus = document.querySelectorAll('.dropdown-submenu');
+
+    // Iterar sobre cada elemento y agregar el evento 'mouseover'
+    dropdownSubmenus.forEach(function (submenu) {
+        submenu.addEventListener('mouseover', function () {
+            submenu.querySelector('.dropdown-menu').classList.add('show');
+        });
+
+        submenu.addEventListener('mouseout', function () {
+            submenu.querySelector('.dropdown-menu').classList.remove('show');
+        });
+    });
+});
+
+
+
+
+
+
+
+
 
 	function redirectToNote138GB() {
    		window.location.href = "../xiaomi_redmi_note13_8gb/";
 	}
 	
 	function redirectToA255G8GB() {
-		window.location.href = "../samsung_galaxy_a25_5g_8gb/";
+		window.location.href = "../celulares/samsung_galaxy_a25_5g_8gb/";
  }
 
  function redirectToiPhone12128GB() {
-	window.location.href = "../apple_iphone12_128gb/";
+	window.location.href = "../celulares/apple_iphone12_128gb/";
 }
 
 function redirectToMotoG23() {
-	window.location.href = "../motorola_moto_g23/";
+	window.location.href = "../celulares/motorola_moto_g23/";
 }
 
 function redirectToA345G8GB() {
-	window.location.href = "../samsung_galaxy_a34_5g_8gb/";
+	window.location.href = "../celulares/samsung_galaxy_a34_5g_8gb/";
 }
 
 function redirectToMotoG148GB() {
-	window.location.href = "../motorola_moto_g14_8gb/";
+	window.location.href = "../celulares/motorola_moto_g14_8gb/";
 }
 
 function redirectToRedmiA34GB() {
-	window.location.href = "../xiaomi_redmi_a3_4gb/";
+	window.location.href = "../celulares/xiaomi_redmi_a3_4gb/";
 }
 
 function redirectToiPhone11128GB() {
-	window.location.href = "../apple_iphone11_128gb/";
+	window.location.href = "../celulares/apple_iphone11_128gb/";
 }
 
 function redirectToA545G256GB() {
-	window.location.href = "../samsung_galaxy_a54_5g_256gb/";
+	window.location.href = "../celulares/samsung_galaxy_a54_5g_256gb/";
 }
 
 function redirectToMotoG73() {
-	window.location.href = "../motorola_moto_g73/";
+	window.location.href = "../celulares/motorola_moto_g73/";
 }
 
 function redirectToMotoE22() {
-	window.location.href = "../motorola_moto_e22/";
+	window.location.href = "../celulares/motorola_moto_e22/";
 }
 
 function redirectToMotoG148GB() {
-	window.location.href = "../motorola_moto_g14_8gb/";
+	window.location.href = "../celulares/motorola_moto_g14_8gb/";
 }
 
 function redirectToRedmi13C8GB() {
-	window.location.href = "../xiaomi_redmi_13c_8gb/";
+	window.location.href = "../celulares/xiaomi_redmi_13c_8gb/";
 }
 
 function redirectToBC10000PI_IC() {
-	window.location.href = "../elfbar_bc10000_pineaple_ice/";
+	window.location.href = "../vapes/elfbar_bc10000_pineaple_ice/";
 }
 
 function redirectToBC10000GR_IC() {
-	window.location.href = "../elfbar_bc10000_grape_ice/";
+	window.location.href = "../vapes/elfbar_bc10000_grape_ice/";
 }
 
 function redirectToBC10000TO() {
-	window.location.href = "../elfbar_bc10000_tobacco/";
+	window.location.href = "../vapes/elfbar_bc10000_tobacco/";
 }
 
 function redirectToBC10000ST_IC() {
-	window.location.href = "../elfbar_bc10000_strawberry_ice/";
+	window.location.href = "../vapes/elfbar_bc10000_strawberry_ice/";
 }
 
 function redirectToA05S5G() {
-	window.location.href = "../samsung_galaxy_a05s_5g/";
+	window.location.href = "../celulares/samsung_galaxy_a05s_5g/";
 }
 
 function redirectToRedmi12C() {
-	window.location.href = "../xiaomi_redmi_12c/";
+	window.location.href = "../celulares/xiaomi_redmi_12c/";
 }
 
 function redirectToV80ST_IC() {
-	window.location.href = "../ignite_v80_strawberry_ice/";
+	window.location.href = "../vapes/ignite_v80_strawberry_ice/";
 }
 
 function redirectToV80IC_MI() {
-	window.location.href = "../ignite_v80_icy_mint/";
+	window.location.href = "../vapes/ignite_v80_icy_mint/";
 }
 
 function redirectToV80PA_FR_SO_KI() {
-	window.location.href = "../ignite_v80_passion_fruit_sour_kiwi/";
+	window.location.href = "../vapes/ignite_v80_passion_fruit_sour_kiwi/";
 }
 
 function redirectToV80ME() {
-	window.location.href = "../ignite_v80_menthol/";
+	window.location.href = "../vapes/ignite_v80_menthol/";
 }
 
 function redirectToPS5() {
-	window.location.href = "../sony_playstation_5/";
+	window.location.href = "../celulares/sony_playstation_5/";
 }
 
 function redirectToA555G256GB() {
-	window.location.href = "../samsung_galaxy_a55_5g_256gb/";
+	window.location.href = "../celulares/samsung_galaxy_a55_5g_256gb/";
 }
 
 function redirectToA158GB() {
-	window.location.href = "../samsung_galaxy_a15_8gb/";
+	window.location.href = "../celulares/samsung_galaxy_a15_8gb/";
 }
 
 function redirectToA04E() {
-	window.location.href = "../samsung_galaxy_a04e/";
+	window.location.href = "../celulares/samsung_galaxy_a04e/";
 }
 
 function redirectToA355G256GB() {
-	window.location.href = "../samsung_galaxy_a35_5g_256gb/";
+	window.location.href = "../celulares/samsung_galaxy_a35_5g_256gb/";
 }
