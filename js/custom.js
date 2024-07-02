@@ -1,5 +1,5 @@
 
-const tipoDeCambio = 1215; // Ejemplo: 1215 ARS por 1 USD
+const tipoDeCambio = 1430; // Ejemplo: 1200 ARS por 1 USD
 
 function formatearPrecio(precio) {
     // Redondea el precio al entero más cercano

@@ -219,14 +219,6 @@
                         <div class="col-md-12">
                            <input class="contactus" placeholder="Cantidad" type="number" name="Quantity" min="1" max="10" required> 
                        </div>
-                       <div class="col-md-12">
-                        <select class="contactus" name="Color" required>
-                            <option value="" disabled selected>Color</option>
-                            <option value="Negro">Negro</option>
-                            <option value="Blanco">Blanco</option>
-                            <!-- Puedes agregar más opciones según sea necesario -->
-                        </select>
-                    </div>
                         <div class="col-md-12">
                            <button type="button" class="send_btn" onclick="sendWhatsAppMessage()">Ir a comprar</button>
                         </div>
@@ -297,7 +289,6 @@
 		var nombre = document.querySelector('input[name="Name"]').value;
 		var email = document.querySelector('input[name="Email"]').value;
 		var cantidad = document.querySelector('input[name="Quantity"]').value;
-		var color = document.querySelector('select[name="Color"]').value;
 	
 		// Verificar si los campos requeridos están completos
 		if (nombre === "" || email === "" || cantidad === "") {
@@ -305,7 +296,7 @@
 			alert("Por favor, completa todos los campos requeridos antes de continuar.");
 		} else {
 			// Construir el mensaje de WhatsApp con los datos del usuario
-			var mensaje = "Hola, estoy interesad@ en comprar el Samsung Galaxy A04E, " + cantidad + " unidad(es), de color " + color + ". \nMi nombre es " + nombre + " y mi correo electrónico es " + email + ".";
+			var mensaje = "Hola, estoy interesad@ en comprar el Samsung Galaxy A04E, " + cantidad + " unidad(es). \nMi nombre es " + nombre + " y mi correo electrónico es " + email + ".";
 	
 			// Codificar el mensaje para usarlo en un URI
 			var mensajeCodificado = encodeURIComponent(mensaje);
